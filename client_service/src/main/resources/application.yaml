@@ -1,0 +1,27 @@
+server:
+  servlet:
+    contextPath: /client-service
+  port: '9092'
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ayman
+    url: jdbc:postgresql://localhost:5431/ayman
+    password: '1234'
+  application:
+    name: client-service
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+jwt:
+  secret: "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0Nzg5MDEyMzQ1Njc4OTAxMjM0NTY"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: 'true'
+    register-with-eureka: 'true'
+

@@ -1,0 +1,46 @@
+server:
+  port: 5050
+
+spring:
+  application:
+    name: apiGateway
+  cloud:
+    gateway:
+      discovery:
+        enabled: true
+      routes:
+        - id: client-service
+          uri: lb://CLIENT-SERVICE
+          predicates:
+            - Path=/client-service/**
+        - id: notification-service
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/notification-service/**
+        - id: otp-service
+          uri: lb://OTP-SERVICE
+          predicates:
+            - Path=/otp-service/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
+
+jwt:
+  secret: "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0Nzg5MDEyMzQ1Njc4OTAxMjM0NTY"
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

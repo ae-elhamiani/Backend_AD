@@ -1,0 +1,31 @@
+server:
+  servlet:
+    contextPath: /notification-service
+  port: '9091'
+
+spring:
+  mail:
+    username: 'ay.elhamiani@gmail.com'
+    host: smtp.gmail.com
+    port: '587'
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    password: 'ppru ataa htmz toab'
+  application:
+    name: notification-service
+
+eureka:
+  client:
+    register-with-eureka: 'true'
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: 'true'
+
+twilio:
+  trial_number: ''
+  account_sid: ''
+  auth_token: ''

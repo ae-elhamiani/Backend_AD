@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Envoi d'Email</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Utiliser des polices personnalisées et des styles supplémentaires -->
+    <style>
+        /* Styles du corps */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styles de la table */
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px; /* Ajustez au besoin */
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles de l'en-tête de la table */
+        th {
+            height: 25px;
+            background-color: #033D7C; /* Couleur modifiée */
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Styles du corps de la table */
+        td {
+            padding: 30px 60px;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Styles des titres */
+        h1, h2, h3, h4, h5, h6 {
+            color: #033D7C; /* Couleur modifiée */
+        }
+
+        /* Styles des paragraphes */
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Styles des boutons */
+        .btn {
+            display: inline-block;
+            background-color: #033D7C; /* Couleur modifiée */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #022651; /* Couleur modifiée */
+        }
+    </style>
+</head>
+<body>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+    <thead>
+    <tr>
+        <th>Agence Direct - Confirmation par Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <p>Objet: <b><span th:text="${subject}"></span></b></p>
+            <p>Madame, Monsieur,</p>
+            <p>Dans le cadre de votre demande d’ouverture de compte en ligne avec Agence Direct, nous avons le plaisir de vous communiquer le Code de Confirmation de votre adresse email</p>
+            <p><b>Code de Confirmation : <span th:text="${codeOtpEmail}"></span></b></p>
+            <p>Ce code est valable pour une durée de: <b>15 minutes</b></p>
+            <p><b>Dans l'attente de vous compter parmi nos clients.</b></p>
+            <!-- Exemple de bouton -->
+            <a href="#" class="btn">Cliquez ici</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
