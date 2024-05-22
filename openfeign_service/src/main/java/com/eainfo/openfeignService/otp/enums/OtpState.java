@@ -1,4 +1,4 @@
-package com.eainfo.openfeignService.otp.outiles.enums;
+package com.eainfo.otpService.enums;
 
 public enum OtpState {
     PENDING,

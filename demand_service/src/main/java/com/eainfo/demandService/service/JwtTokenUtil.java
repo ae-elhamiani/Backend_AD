@@ -1,4 +1,4 @@
-package com.eainfo.clientService.service;
+package com.eainfo.demandService.service;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

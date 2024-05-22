@@ -1,0 +1,7 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: demand-service
+  config:
+    import: optional:configserver:http://localhost:9999

@@ -1,4 +1,4 @@
-package com.eainfo.clientService.config;
+package com.eainfo.demandService.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

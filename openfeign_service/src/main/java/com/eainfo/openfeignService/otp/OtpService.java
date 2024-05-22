@@ -1,6 +1,6 @@
-package com.eainfo.openfeignService.otp;
+package com.eainfo.otpService.otp;
 
-import com.eainfo.openfeignService.otp.outiles.enums.OtpState;
+import com.eainfo.otpService.enums.OtpState;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

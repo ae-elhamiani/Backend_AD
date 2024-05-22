@@ -1,4 +1,4 @@
-package com.eainfo.openfeignService.otp;
+package com.eainfo.otpService.otp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
