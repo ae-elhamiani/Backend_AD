@@ -1,24 +1,11 @@
 server:
-  port: 9093
-  servlet:
-    contextPath: /otp-service
-
+  port: 8082
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    username: ayman
-    url: jdbc:postgresql://localhost:5431/ayman
-    password: '1234'
   application:
     name: otp-service
-  jpa:
-    hibernate:
-      ddl-auto: update
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    fetch-registry: 'true'
-    register-with-eureka: 'true'
-
+  config:
+    import: optional:configserver:http://localhost:9999
+  cloud:
+    config:
+      name: otp_service
+      label: main

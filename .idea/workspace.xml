@@ -4,7 +4,84 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03c8b7c3-97cb-465d-9ac2-0bfd40b6579b" name="Changes" comment="" />
+    <list default="true" id="03c8b7c3-97cb-465d-9ac2-0bfd40b6579b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/config/DemandParamsProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/config/DemandSecurityProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway_service/src/main/java/com/eainfo/gatewayService/GatewayServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway_service/src/main/java/com/eainfo/gatewayService/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway_service/src/main/java/com/eainfo/gatewayService/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway_service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/util/ImageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packs_service/src/main/resources/static/part.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway_service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway_service/src/main/java/com/apiGatewayService/ApiGatewayServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway_service/src/main/java/com/apiGatewayService/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway_service/src/main/java/com/apiGatewayService/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway_service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/ClientServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/ClientServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/controller/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/ClientOcrResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/ClientOcrResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/ClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/ClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/ClientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/ClientResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/OcrRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/OcrRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/OcrResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/dto/OcrResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/enums/ClientStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/enums/ClientStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/model/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/model/Compte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/model/FileProcessingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/model/FileProcessingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/repository/CompteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/repository/CompteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/service/DocumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/java/com/eainfo/clientService/service/DocumentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client_service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_service/src/main/java/com/eainfo/ConfigServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config_service/src/main/java/com/eainfo/configService/ConfigServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config_service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demand_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/DemandServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/DemandServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/model/Demand.java" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/model/Demand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/service/DemandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/service/DemandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/service/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/service/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demand_service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/src/main/java/com/eainfo/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery_service/src/main/java/com/eainfo/discoveryService/DiscoveryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/src/main/resources/Application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery_service/src/main/resources/Application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification_service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/customer/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/otp/OtpCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/otp/OtpCompare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/otp/OtpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/otp/OtpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/otp/enums/OtpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/otp/enums/OtpState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/OtpServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/OtpServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/config/OtpProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/config/OtpProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/controller/OtpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/controller/OtpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/dto/OtpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/dto/OtpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/model/OtpGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/model/OtpGenerated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/repository/OtpGeneratedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/repository/OtpGeneratedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/service/CompareOtp.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/service/CompareOtp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/service/GenerateOtp.java" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/java/com/eainfo/otpService/service/GenerateOtp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/otp_service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/PacksServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/PacksServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/controller/PacksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/controller/PacksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/model/ClientProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/model/ClientProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/model/Pack.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/model/Pack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/repository/ClientProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/repository/ClientProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/repository/PacksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/repository/PacksRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/service/PacksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/java/com/eainfo/packsService/service/PacksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packs_service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packs_service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,14 +90,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2eBnanBKVjDBuelZiRf38lQsL1F" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,42 +115,73 @@
   "keyToString": {
     "Application.ApiGatewayServiceApplication.executor": "Run",
     "Application.ClientServiceApplication.executor": "Run",
+    "Application.ConfigServiceApplication.executor": "Run",
+    "Application.DemandServiceApplication.executor": "Run",
+    "Application.DiscoveryServiceApplication.executor": "Run",
     "Application.EurekaServerApplication.executor": "Run",
+    "Application.GatewayServiceApplication.executor": "Run",
     "Application.NotificationServiceApplication.executor": "Run",
     "Application.OtpServiceApplication.executor": "Run",
+    "Application.PacksServiceApplication.executor": "Run",
     "Application.com.eai.eurekaserver.EurekaServerApplication.executor": "Run",
     "Application.com.eainfo.eurekaServer.EurekaServerApplication.executor": "Run",
     "Maven.backup_v1 [compile].executor": "Run",
     "Maven.backup_v1 [install].executor": "Run",
     "Maven.client_service [install].executor": "Run",
+    "Maven.demand_service [clean].executor": "Run",
+    "Maven.demand_service [compile].executor": "Run",
+    "Maven.demand_service [deploy].executor": "Run",
+    "Maven.demand_service [install].executor": "Run",
+    "Maven.demand_service [validate].executor": "Run",
     "Maven.eureka_server [install].executor": "Run",
     "Maven.openfeign_service [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ayman/workspace2/backup_v1",
+    "last_opened_file_path": "/Users/ayman/workspace2/backup_v1/demand_service/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.eainfo.demandService.service" />
+      <recent name="com.eainfo.packsService.controller" />
+      <recent name="com.eainfo.packsService" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/notification_service/src/main" />
-      <recent name="$PROJECT_DIR$/notification_service/src/main/java/com/eainfo/notificationService" />
-      <recent name="$PROJECT_DIR$/notification_service" />
-      <recent name="$PROJECT_DIR$/otp_service" />
-      <recent name="$PROJECT_DIR$/openfeign_service/src/main/java/com/eainfo/openfeignService/" />
+      <recent name="$PROJECT_DIR$/demand_service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/apigateway_service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/otp_service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/notification_service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/client_service/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packs_service/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/demand_service/src/main/java/com/eainfo/demandService/service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.eainfo.packsService.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientServiceApplication">
-    <configuration name="ApiGatewayServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.apiGatewayService.ApiGatewayServiceApplication" />
-      <module name="apigateway_service" />
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="CompoundRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.GatewayServiceApplication">
+    <configuration name="ConfigServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.eainfo.configService.ConfigServiceApplication" />
+      <module name="config_service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.apiGatewayService.*" />
+          <option name="PATTERN" value="com.eainfo.configService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,14 +189,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.eainfo.clientService.ClientServiceApplication" />
-      <module name="client_service" />
+    <configuration name="DiscoveryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.eainfo.discoveryService.DiscoveryServiceApplication" />
+      <module name="discovery_service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.eainfo.clientService.*" />
+          <option name="PATTERN" value="com.eainfo.discoveryService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,12 +202,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.eainfo.eurekaserver.EurekaServerApplication" />
-      <module name="eureka_server" />
+    <configuration name="GatewayServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.eainfo.gatewayService.GatewayServiceApplication" />
+      <module name="gateway_service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.eainfo.eurekaserver.*" />
+          <option name="PATTERN" value="com.eainfo.gatewayService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,12 +228,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OtpServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.eainfo.otpService.OtpServiceApplication" />
-      <module name="otp_service" />
+    <configuration name="PacksServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.eainfo.packsService.PacksServiceApplication" />
+      <module name="packs_service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.eainfo.otpService.*" />
+          <option name="PATTERN" value="com.eainfo.packsService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,19 +242,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ApiGatewayServiceApplication" />
-      <item itemvalue="Application.EurekaServerApplication" />
+      <item itemvalue="Application.DiscoveryServiceApplication" />
+      <item itemvalue="Application.GatewayServiceApplication" />
+      <item itemvalue="Application.PacksServiceApplication" />
+      <item itemvalue="Application.ConfigServiceApplication" />
       <item itemvalue="Application.NotificationServiceApplication" />
-      <item itemvalue="Application.OtpServiceApplication" />
-      <item itemvalue="Application.ClientServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientServiceApplication" />
-        <item itemvalue="Application.ApiGatewayServiceApplication" />
-        <item itemvalue="Application.OtpServiceApplication" />
+        <item itemvalue="Application.GatewayServiceApplication" />
+        <item itemvalue="Application.PacksServiceApplication" />
+        <item itemvalue="Application.ConfigServiceApplication" />
+        <item itemvalue="Application.DiscoveryServiceApplication" />
         <item itemvalue="Application.NotificationServiceApplication" />
-        <item itemvalue="Application.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -153,5 +268,16 @@
       <updated>1711386928978</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

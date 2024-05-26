@@ -11,10 +11,13 @@
     <modules>
         <module>client_service</module>
         <module>openfeign_service</module>
-        <module>eureka_server</module>
-        <module>apigateway_service</module>
+        <module>discovery_service</module>
+        <module>gateway_service</module>
         <module>otp_service</module>
         <module>notification_service</module>
+        <module>demand_service</module>
+        <module>packs_service</module>
+        <module>config_service</module>
     </modules>
 
     <properties>

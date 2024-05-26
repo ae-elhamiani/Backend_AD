@@ -1,4 +1,4 @@
-package com.eainfo.clientService.model;
+package com.eainfo.packsService.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,11 +17,16 @@ public class ClientProfile {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
+
         @Column(name = "profile_name")
         private String name;
 
         @Column(name = "profile_code")
         private String code;
+
+        @Lob
+        @Column(name = "profile_image")
+        private byte[] image;
 
 
 }

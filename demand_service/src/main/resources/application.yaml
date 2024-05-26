@@ -5,3 +5,7 @@ spring:
     name: demand-service
   config:
     import: optional:configserver:http://localhost:9999
+  cloud:
+    config:
+      name: demand_service
+      label: main

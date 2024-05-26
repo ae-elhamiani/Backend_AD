@@ -4,8 +4,8 @@ import com.eainfo.demandService.dto.DemandRequest;
 import com.eainfo.demandService.enums.StepWeb;
 import com.eainfo.demandService.model.Demand;
 import com.eainfo.demandService.repository.DemandRepository;
-import com.eainfo.openfeignService.customer.CustomerService;
-import com.eainfo.openfeignService.customer.Customer;
+import com.eainfo.demandService.customer.CustomerService;
+import com.eainfo.demandService.customer.Customer;
 import com.eainfo.openfeignService.notification.EmailSender;
 import com.eainfo.openfeignService.notification.Notification;
 import com.eainfo.openfeignService.otp.OtpCompare;
@@ -149,13 +149,24 @@ public class DemandService {
                 .userInput(demandRequest.getUserInput())
                 .secretKey(customer.getSecretKey())
                 .build();
+        System.out.println("9 otp**********************dRequest");
+        System.out.println(otpCompare);
+
+
         try{
             if (otpService.compareOtp(otpCompare) == OtpState.VALID){
                 if(demand.getStepWeb() == StepWeb.EMAIL_STEP){
+                    System.out.println("10 otp**********************dRequest");
+                    System.out.println(demand.getStepWeb());
                     demand.advanceToNextStep();
                     demandRepository.save(demand);
+                    System.out.println("11 otp**********************dRequest");
+                    System.out.println(demand.getStepWeb());
+
                 }
                 String token = jwtTokenUtil.generateToken(demandRequest.getEmail());
+                System.out.println("12 otp**********************dRequest");
+                System.out.println(token);
                 ResponseCookie cookie = ResponseCookie.from("token", token)
                         .httpOnly(true)
                         .secure(false)

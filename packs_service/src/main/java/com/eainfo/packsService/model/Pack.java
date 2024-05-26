@@ -1,4 +1,4 @@
-package com.eainfo.clientService.model;
+package com.eainfo.packsService.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,32 +12,27 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "pack")
+@Table(name = "packs_service")
 public class Pack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "name")
     private String name;
 
     @Column(name = "code")
     private String code;
 
-//    @Temporal(TemporalType.DATE)
-//    @Column(name = "creation_date")
-//    private Date creationDate;
-//
-//    @Temporal(TemporalType.DATE)
-//    @Column(name = "expiration_date")
-//    private Date expirationDate;
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
 
     @ManyToOne
     @JoinColumn(name = "client_profile_id")
     private ClientProfile clientProfile;
 
-//    public Pack() {
-//
-//    }
+
 
 
 }

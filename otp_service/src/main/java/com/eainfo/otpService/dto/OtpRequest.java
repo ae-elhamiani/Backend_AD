@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class OtpRequest {
-        private String secretKey;
+        private byte[] secretKey;
         private String userInput;
 }

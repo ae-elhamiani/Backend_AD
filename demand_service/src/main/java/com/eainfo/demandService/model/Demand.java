@@ -2,7 +2,7 @@ package com.eainfo.demandService.model;
 
 import com.eainfo.demandService.enums.StatusVisio;
 import com.eainfo.demandService.enums.StepWeb;
-import com.eainfo.openfeignService.customer.Customer;
+import com.eainfo.demandService.customer.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

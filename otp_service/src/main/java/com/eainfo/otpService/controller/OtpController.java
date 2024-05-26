@@ -1,7 +1,7 @@
 package com.eainfo.otpService.controller;
 
-import com.eainfo.openfeignService.otp.OtpCompare;
-import com.eainfo.openfeignService.otp.outiles.enums.OtpState;
+import com.eainfo.otpService.dto.OtpRequest;
+import com.eainfo.openfeignService.otp.enums.OtpState;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,13 +16,18 @@ public class OtpController {
 
     private final GenerateOtp generateOtp;
     private final CompareOtp compareOtp;
+
+//    @GetMapping("/otps")
+//    public String generateOtp(@RequestBody OtpRequest otpRequest ) {
+//        return generateOtp.generateOtp(otpRequest.getSecretKey().getBytes());
+//    }
     @PostMapping("/generate")
-    public String generateOtp(@RequestBody OtpCompare otpRequest ) {
+    public String generateOtp(@RequestBody OtpRequest otpRequest ) {
         return generateOtp.generateOtp(otpRequest.getSecretKey());
     }
 
     @PostMapping("/compare")
-    public OtpState compareOtp(@RequestBody OtpCompare otpRequest) {
+    public OtpState compareOtp(@RequestBody OtpRequest otpRequest) {
         return compareOtp.compareOtp(otpRequest.getSecretKey(), otpRequest.getUserInput());
 
     }

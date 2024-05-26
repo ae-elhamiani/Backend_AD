@@ -1,4 +1,4 @@
-package com.eainfo.clientService.outiles.enums;
+package com.eainfo.clientService.enums;
 
 public enum ClientStatus {
     PRE_PROSPECT,

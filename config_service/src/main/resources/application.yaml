@@ -1,3 +1,11 @@
-spring.application.name=config-service
-server.port=9999
-spring.cloud.discovery.enabled=true spring.cloud.config.server.git.uri=file:///Users/ayman/workspace2/backup_v1/config-git-repo
+server:
+  port : 9999
+spring:
+  application:
+    name: config_service
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///Users/ayman/workspace2/backup_v1/config-git-repo
+          default-label: main
