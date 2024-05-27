@@ -9,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
 @SpringBootApplication
-@EnableFeignClients(basePackages = "com.eainfo.openfeignService")
 public class PacksServiceApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(PacksServiceApplication.class, args);

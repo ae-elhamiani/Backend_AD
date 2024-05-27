@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>client_service</module>
-        <module>openfeign_service</module>
         <module>discovery_service</module>
         <module>gateway_service</module>
         <module>otp_service</module>

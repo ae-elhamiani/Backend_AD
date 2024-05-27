@@ -4,13 +4,12 @@ import com.eainfo.demandService.dto.DemandRequest;
 import com.eainfo.demandService.enums.StepWeb;
 import com.eainfo.demandService.model.Demand;
 import com.eainfo.demandService.repository.DemandRepository;
-import com.eainfo.demandService.customer.CustomerService;
-import com.eainfo.demandService.customer.Customer;
-import com.eainfo.openfeignService.notification.EmailSender;
-import com.eainfo.openfeignService.notification.Notification;
-import com.eainfo.openfeignService.otp.OtpCompare;
-import com.eainfo.openfeignService.otp.OtpService;
-import com.eainfo.openfeignService.otp.enums.OtpState;
+import com.eainfo.demandService.openfeign.customer.CustomerService;
+import com.eainfo.demandService.openfeign.customer.Customer;
+import com.eainfo.demandService.openfeign.notification.EmailSender;
+import com.eainfo.demandService.openfeign.notification.Notification;
+import com.eainfo.demandService.openfeign.otp.OtpCompare;
+import com.eainfo.demandService.openfeign.otp.OtpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
@@ -75,7 +74,7 @@ public class DemandService {
         }
     }
 
-        public ResponseEntity<?> signupEmail(DemandRequest demandRequest) {
+    public ResponseEntity<?> signupEmail(DemandRequest demandRequest) {
             Demand demand = demandRepository.findByEmail(demandRequest.getEmail());
             if (demand == null || demand.getStepWeb()== StepWeb.EMAIL_STEP) {
                 Customer customer = Customer.builder()
@@ -132,41 +131,23 @@ public class DemandService {
 
 
     public ResponseEntity<?> otpEmailInput(DemandRequest demandRequest) {
-        System.out.println(demandRequest);
-        System.out.println("1 deman**********************dRequest");
-        System.out.println(demandRequest.getId());
         Demand demand = demandRepository.findById(demandRequest.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("Demand not found with id: " + demandRequest.getId()));
-        System.out.println("2 deman**********************dRequest");
-        System.out.println(demand);
-        System.out.println("3 deman**********************dRequest");
-        System.out.println(demand.getIdClient());
 
         Customer customer = customerService.clientById(demand.getIdClient());
-        System.out.println("4 deman**********************dRequest");
-        System.out.println(customer);
         OtpCompare otpCompare = OtpCompare.builder()
                 .userInput(demandRequest.getUserInput())
                 .secretKey(customer.getSecretKey())
                 .build();
-        System.out.println("9 otp**********************dRequest");
-        System.out.println(otpCompare);
 
 
         try{
-            if (otpService.compareOtp(otpCompare) == OtpState.VALID){
+            if (otpService.compareOtp(otpCompare) == "VALID"){
                 if(demand.getStepWeb() == StepWeb.EMAIL_STEP){
-                    System.out.println("10 otp**********************dRequest");
-                    System.out.println(demand.getStepWeb());
                     demand.advanceToNextStep();
                     demandRepository.save(demand);
-                    System.out.println("11 otp**********************dRequest");
-                    System.out.println(demand.getStepWeb());
-
                 }
                 String token = jwtTokenUtil.generateToken(demandRequest.getEmail());
-                System.out.println("12 otp**********************dRequest");
-                System.out.println(token);
                 ResponseCookie cookie = ResponseCookie.from("token", token)
                         .httpOnly(true)
                         .secure(false)

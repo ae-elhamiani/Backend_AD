@@ -1,8 +1,8 @@
 package com.eainfo.otpService.service;
 
 import com.eainfo.otpService.config.OtpProperties;
+import com.eainfo.otpService.enums.OtpState;
 import com.eainfo.otpService.model.OtpGenerated;
-import com.eainfo.openfeignService.otp.enums.OtpState;
 import com.eainfo.otpService.repository.OtpGeneratedRepository;
 import com.bastiaanjansen.otp.HMACAlgorithm;
 import com.bastiaanjansen.otp.HOTPGenerator;

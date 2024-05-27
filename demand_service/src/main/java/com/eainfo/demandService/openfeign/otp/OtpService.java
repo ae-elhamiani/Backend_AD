@@ -1,17 +1,17 @@
-package com.eainfo.openfeignService.otp;
+package com.eainfo.demandService.openfeign.otp;
 
-import com.eainfo.openfeignService.otp.enums.OtpState;
+import com.eainfo.demandService.openfeign.otp.OtpCompare;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "OTP-SERVICE")
+@FeignClient(name = "otp-service")
 public interface OtpService {
 
     @PostMapping("/generate")
     String generateOtp(@RequestBody OtpCompare request);
 
     @PostMapping("/compare")
-    OtpState compareOtp(@RequestBody OtpCompare request);
+    String compareOtp(@RequestBody OtpCompare request);
 
 }

@@ -1,10 +1,10 @@
-package com.eainfo.demandService.customer;
+package com.eainfo.demandService.openfeign.customer;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "CLIENT-SERVICE")
+@FeignClient(name = "client-service")
 public interface CustomerService {
     @PostMapping("/create-client")
     Customer createClient(@RequestBody Customer client);

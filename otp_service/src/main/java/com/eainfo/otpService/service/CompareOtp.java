@@ -1,8 +1,8 @@
 package com.eainfo.otpService.service;
 
 import com.eainfo.otpService.config.OtpProperties;
+import com.eainfo.otpService.enums.OtpState;
 import com.eainfo.otpService.model.OtpGenerated;
-import com.eainfo.openfeignService.otp.enums.OtpState;
 import com.eainfo.otpService.repository.OtpGeneratedRepository;
 import com.bastiaanjansen.otp.HMACAlgorithm;
 import com.bastiaanjansen.otp.HOTPGenerator;
@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class CompareOtp {
     private final OtpGeneratedRepository otpGeneratedRepository;
     private final OtpProperties otpProperties;
-    public OtpState compareOtp(byte[] secretKey , String inputUser) {
+    public String compareOtp(byte[] secretKey , String inputUser) {
         OtpGenerated otpGenerated = otpGeneratedRepository.findTopBySecretKeyOrderByIdDesc(secretKey);
         System.out.println("5 otp**********************dRequest");
         if (pastTime(otpGenerated.getDate_generation()) < otpProperties.getExpiryOtpTimeInMinutes()) {
@@ -36,15 +36,15 @@ public class CompareOtp {
                     System.out.println("8 otp**********************dRequest");
                     System.out.println(OtpState.VALID);
 
-                    return OtpState.VALID;
+                    return OtpState.VALID.toString();
                 }else {
-                    return OtpState.INVALID;
+                    return OtpState.INVALID.toString();
                 }
             } else{
-                return OtpState.EXPIRED_ATTEMPT;
+                return OtpState.EXPIRED_ATTEMPT.toString();
             }
         } else {
-            return OtpState.TIMEOUT;
+            return OtpState.TIMEOUT.toString();
         }
     }
 

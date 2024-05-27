@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableConfigurationProperties({DemandSecurityProperties.class, DemandParamsProperties.class})
-@EnableFeignClients(basePackages = {"com.eainfo.openfeignService", "com.eainfo.demandService.customer"})
+@EnableFeignClients(basePackages = {"com.eainfo.demandService.openfeign"})
 
 
 public class DemandServiceApplication {

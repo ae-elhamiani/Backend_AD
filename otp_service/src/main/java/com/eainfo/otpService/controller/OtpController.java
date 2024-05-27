@@ -1,7 +1,7 @@
 package com.eainfo.otpService.controller;
 
 import com.eainfo.otpService.dto.OtpRequest;
-import com.eainfo.openfeignService.otp.enums.OtpState;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,7 +27,7 @@ public class OtpController {
     }
 
     @PostMapping("/compare")
-    public OtpState compareOtp(@RequestBody OtpRequest otpRequest) {
+    public String compareOtp(@RequestBody OtpRequest otpRequest) {
         return compareOtp.compareOtp(otpRequest.getSecretKey(), otpRequest.getUserInput());
 
     }

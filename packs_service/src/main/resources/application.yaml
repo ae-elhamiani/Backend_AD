@@ -8,4 +8,4 @@ spring:
   cloud:
     config:
       name: packs_service
-      label: main
+#      label: main

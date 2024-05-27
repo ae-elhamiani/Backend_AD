@@ -1,4 +1,4 @@
-package com.eainfo.openfeignService.otp;
+package com.eainfo.demandService.openfeign.notification;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OtpCompare {
-    private byte[] secretKey;
-    private String userInput;
+public class EmailSender {
+    private String email;
+    private String codeOtpEmail;
 
 }

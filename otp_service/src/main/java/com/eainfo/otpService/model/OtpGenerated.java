@@ -1,6 +1,6 @@
 package com.eainfo.otpService.model;
 
-import com.eainfo.openfeignService.otp.enums.OtpState;
+import com.eainfo.otpService.enums.OtpState;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
