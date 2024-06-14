@@ -14,6 +14,7 @@
         <module>gateway_service</module>
         <module>otp_service</module>
         <module>notification_service</module>
+        <module>notification_service_mongodb</module>
         <module>demand_service</module>
         <module>packs_service</module>
         <module>config_service</module>

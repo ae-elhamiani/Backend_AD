@@ -10,7 +10,6 @@ public interface Notification{
 @PostMapping("send-otp-email")
 void sendOtpEmail(@RequestBody EmailSender request);
 
-
-    @PostMapping("send-otp-sms")
-    void sendSms(@RequestBody SmsSender request);
+@PostMapping("send-otp-sms")
+void sendSms(@RequestBody SmsSender request);
 }

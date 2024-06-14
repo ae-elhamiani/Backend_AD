@@ -19,21 +19,15 @@ public class CompareOtp {
     private final OtpProperties otpProperties;
     public String compareOtp(byte[] secretKey , String inputUser) {
         OtpGenerated otpGenerated = otpGeneratedRepository.findTopBySecretKeyOrderByIdDesc(secretKey);
-        System.out.println("5 otp**********************dRequest");
         if (pastTime(otpGenerated.getDate_generation()) < otpProperties.getExpiryOtpTimeInMinutes()) {
-            System.out.println("6 otp**********************dRequest");
-            System.out.println(otpGenerated);
             System.out.println(pastTime(otpGenerated.getDate_generation()));
             if (otpGenerated.getNb_attempt() < otpProperties.getMaxGenerationAttempts()) {
                 Boolean isOtpValid = compareOtp(secretKey, inputUser, otpGenerated.getCounter());
                 otpGenerated.incrementNb_attempt();
                 otpGeneratedRepository.save(otpGenerated);
-                System.out.println("7 otp**********************dRequest");
                 System.out.println(isOtpValid);
 
-
                 if (isOtpValid) {
-                    System.out.println("8 otp**********************dRequest");
                     System.out.println(OtpState.VALID);
 
                     return OtpState.VALID.toString();

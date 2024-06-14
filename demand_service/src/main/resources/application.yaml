@@ -4,7 +4,7 @@ spring:
   application:
     name: demand-service
   config:
-    import: optional:configserver:http://localhost:9999
+    import: optional:configserver:${CONFIG_SERVICE_URL:http://localhost:9999}
   cloud:
     config:
       name: demand_service

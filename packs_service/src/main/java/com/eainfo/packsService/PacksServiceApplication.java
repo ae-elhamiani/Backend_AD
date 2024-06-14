@@ -100,13 +100,13 @@ public class PacksServiceApplication {
         packsRepository.save(pack8);
 
         Pack pack9 = new Pack();
-        pack9.setName("Pack Gold");
+        pack9.setName("Pack pro Gold");
         pack9.setCode("gld");
         pack9.setClientProfile(clientProfile3);
         packsRepository.save(pack9);
 
         Pack pack10 = new Pack();
-        pack10.setName("Pack Platinum");
+        pack10.setName("Pack pro Platinum");
         pack10.setCode("plt");
         pack10.setClientProfile(clientProfile3);
         packsRepository.save(pack10);

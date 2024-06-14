@@ -1,0 +1,155 @@
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 'admin'
+    ports:
+      - "5431:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+  mongodb:
+    image: mongo:4.4
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://mongodb:27017/
+    ports:
+      - "5051:8081"
+    depends_on:
+      - mongodb
+
+  discovery-service:
+    build: ./discovery_service
+    container_name: discovery-service
+    ports:
+      - '8761:8761'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      retries: 4
+
+  config-service:
+    build: ./config_service
+    container_name: config-service
+    ports:
+      - '9999:9999'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9999/actuator/health"]
+      interval: 10s
+      retries: 4
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+
+  gateway-service:
+    build: ./gateway_service
+    container_name: gateway-service
+    ports:
+      - '5555:5555'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    depends_on:
+      config-service:
+        condition: service_healthy
+
+
+  packs-service:
+    build: ./packs_service
+    container_name: packs-service
+    ports:
+      - '8081:8081'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 10s
+      retries: 4
+    depends_on:
+      config-service:
+        condition: service_healthy
+
+  otp-service:
+    build: ./otp_service
+    container_name: otp-service
+    ports:
+      - '8082:8082'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    depends_on:
+      config-service:
+        condition: service_healthy
+
+  notification-service:
+    build: ./notification_service_mongodb
+    container_name: notification-service
+    ports:
+      - '8083:8083'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    depends_on:
+      config-service:
+        condition: service_healthy
+
+  demand-service:
+    build: ./demand_service
+    container_name: demand-service
+    ports:
+      - '8084:8084'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    depends_on:
+      config-service:
+        condition: service_healthy
+
+  client-service:
+    build: ./client_service
+    container_name: client-service
+    ports:
+      - '8085:8085'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    depends_on:
+      config-service:
+        condition: service_healthy
+
+
+volumes:
+  postgres_data:
+  mongodb_data:

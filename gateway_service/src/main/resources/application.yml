@@ -1,36 +1,10 @@
 server:
-  port: 5050
-
+  port: 5555
 spring:
-  main:
-    web-application-type: reactive
-
   application:
     name: gateway-service
+  config:
+    import: optional:configserver:${CONFIG_SERVICE_URL:http://localhost:9999}
   cloud:
-    loadbalancer:
-      retry:
-        enabled: true
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    org.springframework.cloud.netflix.eureka: DEBUG
-    com.netflix.discovery: DEBUG
-    reactor.netty: DEBUG
+    config:
+      name: gateway_service
